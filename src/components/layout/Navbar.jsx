@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import { navLinks } from '@/data/navigation';
+import { profile } from '@/data/profile';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,11 @@ export default function Navbar() {
       isActive ? 'text-ink dark:text-mist' : 'text-ink-soft dark:text-mist-soft hover:text-ink dark:hover:text-mist'
     }`;
 
+  // Splits "First Last" into "First" + accented "." + "Last".
+  // Falls back to the plain name if it's a single word.
+  const [firstName, ...rest] = profile.name.split(' ');
+  const lastName = rest.join(' ');
+
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/80 backdrop-blur-md dark:border-mist/10 dark:bg-graphite/80">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
@@ -21,7 +27,13 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="font-display text-lg font-semibold tracking-tight text-ink dark:text-mist"
         >
-          Your<span className="text-signal">.</span>Name
+          {firstName}
+          {lastName && (
+            <>
+              <span className="text-signal">.</span>
+              {lastName}
+            </>
+          )}
         </NavLink>
 
         {/* Desktop nav */}

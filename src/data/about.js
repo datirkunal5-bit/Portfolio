@@ -40,10 +40,10 @@ export const experience = [
 export const education = [
   {
     id: 'edu-1',
-    degree: 'Diploma in Computer Engineering',
+    degree: 'Diploma in Computer Technology',
     org: 'Amrutvahini Polytechnic, Sangamner',
     period: '2022 — 2025',
-    description: 'Focused on web development and data structures.',
+    description: 'Focused on Programming  and  Core Subjects .',
   },
    {
     id: 'edu-2',

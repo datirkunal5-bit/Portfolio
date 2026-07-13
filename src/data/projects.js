@@ -11,7 +11,7 @@ export const projects = [
     title: 'AI Resume Analyzer',
     description:
       'Scores a resume against a job description using the OpenAI API, highlighting keyword gaps and giving actionable improvement suggestions.',
-    image: null ,
+    image: '/resume_analyzer.png' ,
     icon: Sparkles,
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'OpenAI API'],
     liveUrl: 'https://ai-resume-analyzer-peach-eight.vercel.app/',
@@ -23,7 +23,7 @@ export const projects = [
     title: 'E-Commerce Platform',
     description:
       'Full-stack store with cart, checkout, and an admin dashboard for managing inventory and orders.',
-    image: null,
+    image: '/ecommerce.png' ,
     icon: ShoppingCart,
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
     liveUrl: 'https://example.com',
